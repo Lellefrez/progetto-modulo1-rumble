@@ -66,10 +66,10 @@ body > main {
 .view-button {
   display: flex;
   align-items: center;
-  border: 2px solid green;
+  border: 1px solid green;
   background-color: white;
   outline: none;
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 1.5rem;
 }
 /*---------------------------------*/
@@ -116,6 +116,7 @@ body > header {
 /*  Main */
 /*---------------------------------*/
 
+/* Sezione singola */
 body > main {
   overflow: auto;
 }
@@ -125,7 +126,7 @@ body > main {
   gap: 1rem;
   padding: 2rem 2rem;
   background-color: #f4f5f8;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid gray;
 }
 .s-caption-container {
   display: flex;
@@ -138,7 +139,7 @@ body > main {
 .s-text:nth-child(1) {
   padding-bottom: 0.5rem;
 }
-.s-text > .channel {
+.s-text > .s-channel {
   padding-top: 0.5rem;
 }
 .s-image-container > img {
@@ -149,6 +150,53 @@ body > main {
 }
 .s-profile-picture > img {
   border-radius: 50%;
+}
+
+/* Più Sezioni*/
+.title-rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.caption-container {
+  display: flex;
+  gap: 1rem;
+}
+.profile-picture > img {
+  border-radius: 50%;
+}
+.image-container > img {
+  border-radius: 1rem;
+}
+.video-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-bottom: 2px solid gray;
+}
+.gaming-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+.sports-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+.gaming-row-u {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-bottom: 2px solid gray;
+}
+.sports-row-u {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-bottom: 2px solid gray;
 }
 /*---------------------------------*/
 /* MEDIA QUERIES*/
@@ -177,6 +225,9 @@ body > main {
   .search-bar {
     margin-left: auto;
   }
+  .tablet-hide {
+    display: none;
+  }
 }
 /* Mobile */
 @media (max-width: 740px) {
@@ -203,5 +254,8 @@ body > main {
   }
   .s-text > .channel {
     padding-top: none;
+  }
+  .mobile-hide {
+    display: none;
   }
 }
