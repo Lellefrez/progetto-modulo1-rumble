@@ -1,0 +1,57 @@
+:root {
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "he he"
+    "as na"
+    "as ma";
+  grid-template-columns: 63px 1fr;
+  grid-template-rows: 69px 60px 1fr;
+}
+body > header {
+  grid-area: he;
+  background-color: red;
+}
+body > aside {
+  grid-area: as;
+  background-color: yellow;
+}
+body > nav {
+  grid-area: na;
+  background-color: green;
+}
+
+body > main {
+  grid-area: ma;
+  background-color: blue;
+}
+
+/*---------------------------------*/
+/* MEDIA QUERIES*/
+/*---------------------------------*/
+/* Tablet */
+
+@media (max-width: 740px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "he"
+      "na"
+      "ma";
+  }
+  body > aside {
+    display: none;
+  }
+}
