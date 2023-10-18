@@ -22,8 +22,12 @@ body {
 }
 body > header {
   grid-area: he;
-  background-color: red;
 }
+body > header > section {
+  display: flex;
+  align-items: center;
+}
+
 body > aside {
   grid-area: as;
   background-color: yellow;
@@ -37,13 +41,81 @@ body > main {
   grid-area: ma;
   background-color: blue;
 }
+/*---------------------------------*/
+/* GENERICI */
+
+.singup-button {
+  display: flex;
+  align-items: center;
+  border: 3px solid green;
+  background-color: white;
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+}
+.singin-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  background-color: white;
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+}
+/*---------------------------------*/
+
+/*---------------------------------*/
+/* HEADER */
+/*---------------------------------*/
+
+body > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+}
+.logo-section,
+.login-section {
+  gap: 1.5rem;
+}
+.search-bar > input {
+  height: 30px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  border-right: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  width: 30vw;
+}
+.search-bar > button {
+  height: 30px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  border-left: none;
+  padding: 0.25rem 0.75rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.search-bar > button > img {
+  height: 100%;
+}
+
+/*---------------------------------*/
+/*  Main */
+/*---------------------------------*/
+
+body > main {
+  overflow: auto;
+}
 
 /*---------------------------------*/
 /* MEDIA QUERIES*/
 /*---------------------------------*/
 /* Tablet */
 
-@media (max-width: 740px) {
+@media (max-width: 960px) {
   body {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -53,5 +125,30 @@ body > main {
   }
   body > aside {
     display: none;
+  }
+  .search-bar > input {
+    display: none;
+  }
+  .search-bar > button {
+    background-color: transparent;
+    padding: 0.25rem;
+    border: none;
+  }
+  .search-bar {
+    margin-left: auto;
+  }
+}
+/* Mobile */
+@media (max-width: 640px) {
+  .search-bar > input {
+    display: none;
+  }
+  .search-bar > button {
+    background-color: transparent;
+    padding: 0.25rem;
+    border: none;
+  }
+  .search-bar {
+    margin-left: auto;
   }
 }
