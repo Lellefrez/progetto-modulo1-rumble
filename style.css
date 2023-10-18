@@ -34,7 +34,6 @@ body > aside {
 }
 body > nav {
   grid-area: na;
-  background-color: green;
 }
 
 body > main {
@@ -82,6 +81,7 @@ body > header {
   justify-content: space-between;
   padding: 0 1.5rem;
   gap: 1.5rem;
+  border-bottom: 1px solid lightgray;
 }
 .logo-section > img:nth-child(1):hover {
   cursor: pointer;
@@ -120,6 +120,14 @@ body > header {
 body > aside {
   overflow: auto;
 }
+body > aside::-webkit-scrollbar {
+  color: #fff;
+}
+aside > hr {
+  width: 4rem;
+  margin-left: 0.4rem;
+  border: 1px solid lightgray;
+}
 aside > ul {
   display: flex;
   flex-direction: column;
@@ -128,7 +136,6 @@ aside > ul {
   padding: 1rem;
   gap: 1rem;
   list-style: none;
-  border-top: 1px solid lightgray;
 }
 li > button {
   background-color: transparent;
@@ -149,6 +156,10 @@ li > button:hover {
   width: 85px;
   border-radius: 50%;
 }
+.asaide-picture > strong {
+  font-size: 0.6rem;
+  padding: 0.2rem;
+}
 .asaide-picture > div > img {
   display: flex;
   border-radius: 50%;
@@ -163,7 +174,45 @@ li > button:hover {
   border-radius: 0.5rem;
 }
 .theme > li {
-  padding: 0.5rem;
+  padding: 0.2rem;
+}
+/*---------------------------------*/
+/* Nav  */
+/*---------------------------------*/
+body > nav::-webkit-scrollbar {
+  color: #fff;
+}
+body > nav {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav > li {
+  font-size: 1rem;
+  list-style: none;
+}
+.nav > li > a {
+  background-color: lightgray;
+  border-radius: 1rem;
+
+  border: 1rem;
+  padding: 0.4rem 0.6rem;
+  color: black;
+  text-decoration: none;
+}
+.nav > .red > a {
+  background-color: red;
+  color: white;
+}
+.nav > .blue > a {
+  background-color: blue;
+}
+.nav-container > ul {
+  gap: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*---------------------------------*/
 /*  Main */
@@ -172,6 +221,7 @@ li > button:hover {
 /* Sezione singola */
 body > main {
   overflow: auto;
+  border-left: 1px solid lightgray;
 }
 .single-video > figure {
   display: flex;
@@ -257,7 +307,7 @@ body > main {
 /*---------------------------------*/
 /* Tablet */
 
-@media (max-width: 960px) {
+@media (max-width: 860px) {
   body {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -313,3 +363,5 @@ body > main {
     display: none;
   }
 }
+
+/* La Nav mi da dei problemi con le media e non capisco perchè*/
