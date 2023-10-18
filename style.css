@@ -31,7 +31,6 @@ body > header > section {
 
 body > aside {
   grid-area: as;
-  background-color: yellow;
 }
 body > nav {
   grid-area: na;
@@ -84,6 +83,9 @@ body > header {
   padding: 0 1.5rem;
   gap: 1.5rem;
 }
+.logo-section > img:nth-child(1):hover {
+  cursor: pointer;
+}
 .logo-section,
 .login-section {
   gap: 1.5rem;
@@ -113,6 +115,57 @@ body > header {
 }
 
 /*---------------------------------*/
+/* Aside  */
+/*---------------------------------*/
+body > aside {
+  overflow: auto;
+}
+aside > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  list-style: none;
+  border-top: 1px solid lightgray;
+}
+li > button {
+  background-color: transparent;
+  padding: 0.2rem;
+  margin: auto;
+  font-size: 0.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: none;
+}
+li > button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.picture-aside {
+  display: flex;
+  flex-direction: column;
+  width: 85px;
+  border-radius: 50%;
+}
+.asaide-picture > div > img {
+  display: flex;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.asaide-picture > div > img:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.theme {
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+}
+.theme > li {
+  padding: 0.5rem;
+}
+/*---------------------------------*/
 /*  Main */
 /*---------------------------------*/
 
@@ -126,7 +179,7 @@ body > main {
   gap: 1rem;
   padding: 2rem 2rem;
   background-color: #f4f5f8;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 .s-caption-container {
   display: flex;
@@ -174,8 +227,9 @@ body > main {
   display: flex;
   gap: 1rem;
   padding: 1rem 1rem 2rem 1rem;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid lightgray;
 }
+
 .gaming-row {
   display: flex;
   gap: 1rem;
@@ -190,13 +244,13 @@ body > main {
   display: flex;
   gap: 1rem;
   padding: 1rem 1rem 2rem 1rem;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 .sports-row-u {
   display: flex;
   gap: 1rem;
   padding: 1rem 1rem 2rem 1rem;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 /*---------------------------------*/
 /* MEDIA QUERIES*/
