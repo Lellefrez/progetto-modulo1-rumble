@@ -185,12 +185,14 @@ body > nav::-webkit-scrollbar {
 body > nav {
   overflow: auto;
   display: flex;
+  flex-shrink: ;
   align-items: center;
   justify-content: center;
 }
 .nav > li {
   font-size: 1rem;
   list-style: none;
+  flex-shrink: 0;
 }
 .nav > li > a {
   background-color: lightgray;
